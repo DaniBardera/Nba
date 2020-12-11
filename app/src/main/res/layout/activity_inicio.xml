@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio">
+
+    <ImageView
+        android:id="@+id/players"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/davies"
+        app:layout_constraintBottom_toTopOf="@+id/calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <ImageView
+        android:id="@+id/teams"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/teams"
+        app:layout_constraintBottom_toTopOf="@+id/calendar"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/calendar"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="44dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/playersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugadores"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/calendar"
+        app:layout_constraintEnd_toEndOf="@+id/players"
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintStart_toStartOf="@+id/players"
+        app:layout_constraintTop_toBottomOf="@id/players" />
+
+    <TextView
+        android:id="@+id/teamsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equipos"
+        app:layout_constraintBottom_toTopOf="@id/calendar"
+        app:layout_constraintTop_toBottomOf="@id/teams"
+        app:layout_constraintStart_toStartOf="@id/teams"
+        app:layout_constraintEnd_toEndOf="@id/teams"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:id="@+id/calendarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/calendar"
+        app:layout_constraintStart_toStartOf="@id/calendar"
+        app:layout_constraintTop_toBottomOf="@id/calendar"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona la información a la que desees acceder"
+        app:layout_constraintBottom_toTopOf="@+id/teams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        android:gravity="center"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nbaapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NbaApp"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".Inicio" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Clase Players -->
+        <activity
+            android:name=".Players"
+            android:label="Jugadores"
+            android:parentActivityName=".Inicio">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.Players" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Clase Teams -->
+        <activity android:name=".Teams"
+            android:label="Equipos"
+            android:parentActivityName=".Inicio"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.Teams" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Clase Stats -->
+        <activity android:name=".Stats"
+            android:label="Estadísticas"
+            android:parentActivityName=".Inicio"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.Stats" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Clase Calendar -->
+        <activity android:name=".Calendar"
+            android:label="Calendario"
+            android:parentActivityName=".Inicio"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.Calendar" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Clase InfoPlayer -->
+        <activity
+            android:name=".InfoPlayers"
+            android:label="InfoPlayers"
+            android:parentActivityName=".Players">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Players" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.InfoPlayers" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Clase InfoTeam -->
+        <activity
+            android:name=".InfoTeam"
+            android:label="InfoTeam"
+            android:parentActivityName=".Teams">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Teams" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.InfoTeam" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
